@@ -1,0 +1,162 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:4:5-29:19
+MERGED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akbarcp/.gradle/caches/transforms-3/c46bca88a855df2328263ebcbbc86d9e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akbarcp/.gradle/caches/transforms-3/c46bca88a855df2328263ebcbbc86d9e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [:webview_flutter_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.browser:browser:1.5.0] /Users/akbarcp/.gradle/caches/transforms-3/ec370e65d6f9d4fcba3163c05eba15b9/transformed/browser-1.5.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/akbarcp/.gradle/caches/transforms-3/dc2baa750804166dcbb6055042d5b350/transformed/webkit-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/akbarcp/.gradle/caches/transforms-3/740e98d5a48f7c863f64a00c654513ec/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/5550683ab18708275aa1bc1cc3bd7513/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/d43769c4c85b255b1753c27963057250/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/8a009e4f390416b5f7e57dcf9b2140d0/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c1bc23916ae842b28ef91cf4cbe01ea6/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/91ed00da297fdfd5c5e5974ba5dcc1c4/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/e67e9705c4f6c4cad3560d528fe58492/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/akbarcp/.gradle/caches/transforms-3/5b4ba9b8b67ea18eb4838c9ffad196bc/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/9534a16b233a7525b7b0106534bbba93/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akbarcp/.gradle/caches/transforms-3/c46bca88a855df2328263ebcbbc86d9e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/10e4f11d40285160450d9c7876d89b36/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c91f48aed0680046390806067e917f63/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/20bfeb850df17ef8aec9382ac5c68f23/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/10eb624f7930271ace44f40a2213f194/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/96b201ec97caf3a17e1f3d068a46f44a/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/akbarcp/.gradle/caches/transforms-3/baa787852083036ced940631fc7076b7/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:2:5-64
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:1-30:12
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:5-66
+MERGED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:5-66
+MERGED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:5-66
+	android:name
+		ADDED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:22-64
+uses-sdk
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+MERGED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.browser:browser:1.5.0] /Users/akbarcp/.gradle/caches/transforms-3/ec370e65d6f9d4fcba3163c05eba15b9/transformed/browser-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] /Users/akbarcp/.gradle/caches/transforms-3/ec370e65d6f9d4fcba3163c05eba15b9/transformed/browser-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/akbarcp/.gradle/caches/transforms-3/dc2baa750804166dcbb6055042d5b350/transformed/webkit-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/akbarcp/.gradle/caches/transforms-3/dc2baa750804166dcbb6055042d5b350/transformed/webkit-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/akbarcp/.gradle/caches/transforms-3/740e98d5a48f7c863f64a00c654513ec/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/akbarcp/.gradle/caches/transforms-3/740e98d5a48f7c863f64a00c654513ec/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/5550683ab18708275aa1bc1cc3bd7513/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/5550683ab18708275aa1bc1cc3bd7513/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/d43769c4c85b255b1753c27963057250/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/d43769c4c85b255b1753c27963057250/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/8a009e4f390416b5f7e57dcf9b2140d0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/8a009e4f390416b5f7e57dcf9b2140d0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c1bc23916ae842b28ef91cf4cbe01ea6/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c1bc23916ae842b28ef91cf4cbe01ea6/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/91ed00da297fdfd5c5e5974ba5dcc1c4/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/91ed00da297fdfd5c5e5974ba5dcc1c4/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/e67e9705c4f6c4cad3560d528fe58492/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/e67e9705c4f6c4cad3560d528fe58492/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/akbarcp/.gradle/caches/transforms-3/5b4ba9b8b67ea18eb4838c9ffad196bc/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/akbarcp/.gradle/caches/transforms-3/5b4ba9b8b67ea18eb4838c9ffad196bc/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/9534a16b233a7525b7b0106534bbba93/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/9534a16b233a7525b7b0106534bbba93/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akbarcp/.gradle/caches/transforms-3/c46bca88a855df2328263ebcbbc86d9e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akbarcp/.gradle/caches/transforms-3/c46bca88a855df2328263ebcbbc86d9e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/10e4f11d40285160450d9c7876d89b36/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/akbarcp/.gradle/caches/transforms-3/10e4f11d40285160450d9c7876d89b36/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c91f48aed0680046390806067e917f63/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/c91f48aed0680046390806067e917f63/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/20bfeb850df17ef8aec9382ac5c68f23/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/akbarcp/.gradle/caches/transforms-3/20bfeb850df17ef8aec9382ac5c68f23/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/10eb624f7930271ace44f40a2213f194/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/10eb624f7930271ace44f40a2213f194/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/96b201ec97caf3a17e1f3d068a46f44a/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/akbarcp/.gradle/caches/transforms-3/96b201ec97caf3a17e1f3d068a46f44a/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/akbarcp/.gradle/caches/transforms-3/baa787852083036ced940631fc7076b7/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/akbarcp/.gradle/caches/transforms-3/baa787852083036ced940631fc7076b7/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/debug/AndroidManifest.xml
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+permission#np.com.sarbagyastha.youtube_player_iframe_example.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+uses-permission#np.com.sarbagyastha.youtube_player_iframe_example.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
