@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   youtube_player_iframe:
-     path: ../../youtube_player_iframe
+     path: ../../yt_payer
 
 dev_dependencies:
   flutter_test:
