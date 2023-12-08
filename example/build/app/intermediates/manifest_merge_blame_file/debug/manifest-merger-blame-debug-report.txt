@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="np.com.sarbagyastha.youtube_player_iframe_example"
+4    android:versionCode="1"
+5    android:versionName="4.0.3" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:5-66
+14-->/Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:22-64
+15
+16    <permission
+16-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+17        android:name="np.com.sarbagyastha.youtube_player_iframe_example.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="np.com.sarbagyastha.youtube_player_iframe_example.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+21
+22    <application
+23        android:name="android.app.Application"
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+27        android:label="Youtube Player IFrame Demo" >
+28        <activity
+29            android:name="np.com.sarbagyastha.youtube_player_iframe_example.MainActivity"
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31            android:exported="true"
+32            android:hardwareAccelerated="true"
+33            android:launchMode="singleTop"
+34            android:theme="@style/LaunchTheme"
+35            android:windowSoftInputMode="adjustResize" >
+36            <meta-data
+37                android:name="io.flutter.embedding.android.NormalTheme"
+38                android:resource="@style/NormalTheme" />
+39
+40            <intent-filter android:exported="true" >
+41                <action android:name="android.intent.action.MAIN" />
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+44            </intent-filter>
+45        </activity>
+46
+47        <meta-data
+48            android:name="flutterEmbedding"
+49            android:value="2" />
+50
+51        <activity
+51-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+52            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+52-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+53            android:exported="false"
+53-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+54            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+54-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+55
+56        <uses-library
+56-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+57            android:name="androidx.window.extensions"
+57-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+58            android:required="false" />
+58-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+59        <uses-library
+59-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+60            android:name="androidx.window.sidecar"
+60-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+61            android:required="false" />
+61-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+62    </application>
+63
+64</manifest>
