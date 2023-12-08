@@ -161,50 +161,53 @@ class _PlayerDemoState extends State<PlayerDemo> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: YoutubePlayerScaffold(
-          width: MediaQuery.of(context).size.width - 48,
-          aspectRatio: 16 / 9,
-          // autoFullScreen: true,
-          controller: _controller,
-          builder: (context, player) {
-            return Container(
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Flexible(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 24),
-                      child: AspectRatio(aspectRatio: 16 / 9, child: player),
+        body: Builder(builder: (context) {
+          return YoutubePlayerScaffold(
+            isBackVisible: false,
+            width: 0,
+            aspectRatio: 16 / 9,
+            // autoFullScreen: true,
+            controller: _controller,
+            builder: (context, player) {
+              return Container(
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 0),
+                        child: AspectRatio(aspectRatio: 16 / 9, child: player),
+                      ),
                     ),
-                  ),
-                  Visibility(
-                    // visible: MediaQuery.of(context).orientation == Orientation.portrait,
-                    visible: true,
-                    child: Column(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            showQualityBottomSheet(context);
-                          },
-                          child: const ListTile(
-                            title: Text('this card a '),
-                          ),
-                        ),
-                        InkWell(
+                    Visibility(
+                      // visible: MediaQuery.of(context).orientation == Orientation.portrait,
+                      visible: true,
+                      child: Column(
+                        children: [
+                          InkWell(
                             onTap: () {
-                              showSettingsBottomSheet(context);
+                              showQualityBottomSheet(context);
                             },
-                            child: const ListTile(title: Text('this card a '))),
-                        const ListTile(title: Text('this card a ')),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            );
-          },
-        ),
+                            child: const ListTile(
+                              title: Text('this card a '),
+                            ),
+                          ),
+                          InkWell(
+                              onTap: () {
+                                showSettingsBottomSheet(context);
+                              },
+                              child: const ListTile(title: Text('this card a '))),
+                          const ListTile(title: Text('this card a ')),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              );
+            },
+          );
+        }),
       ),
     );
   }
@@ -525,52 +528,55 @@ class _YoutubeAppDemoState extends State<YoutubeAppDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return YoutubePlayerScaffold(
-      width: MediaQuery.of(context).size.width - 48,
-      controller: _controller,
-      builder: (context, player) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text('Youtube Player IFrame Demo'),
-            actions: const [VideoPlaylistIconButton()],
-          ),
-          body: LayoutBuilder(
-            builder: (context, constraints) {
-              if (kIsWeb && constraints.maxWidth > 750) {
-                return Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    return Builder(builder: (context) {
+      return YoutubePlayerScaffold(
+        isBackVisible: true,
+        width: MediaQuery.of(context).size.width - 48,
+        controller: _controller,
+        builder: (context, player) {
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text('Youtube Player IFrame Demo'),
+              actions: const [VideoPlaylistIconButton()],
+            ),
+            body: LayoutBuilder(
+              builder: (context, constraints) {
+                if (kIsWeb && constraints.maxWidth > 750) {
+                  return Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Column(
+                          children: [
+                            player,
+                            const VideoPositionIndicator(),
+                          ],
+                        ),
+                      ),
+                      const Expanded(
+                        flex: 2,
+                        child: SingleChildScrollView(
+                          child: Controls(),
+                        ),
+                      ),
+                    ],
+                  );
+                }
+
+                return ListView(
                   children: [
-                    Expanded(
-                      flex: 3,
-                      child: Column(
-                        children: [
-                          player,
-                          const VideoPositionIndicator(),
-                        ],
-                      ),
-                    ),
-                    const Expanded(
-                      flex: 2,
-                      child: SingleChildScrollView(
-                        child: Controls(),
-                      ),
-                    ),
+                    player,
+                    const VideoPositionIndicator(),
+                    const Controls(),
                   ],
                 );
-              }
-
-              return ListView(
-                children: [
-                  player,
-                  const VideoPositionIndicator(),
-                  const Controls(),
-                ],
-              );
-            },
-          ),
-        );
-      },
-    );
+              },
+            ),
+          );
+        },
+      );
+    });
   }
 
   @override

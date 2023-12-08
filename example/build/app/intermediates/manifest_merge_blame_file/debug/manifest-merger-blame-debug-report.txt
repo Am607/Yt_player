@@ -12,8 +12,8 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:5-66
-14-->/Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/android/app/src/main/AndroidManifest.xml:3:22-64
+14-->/Users/akbarcp/Documents/projects/eduport/yt_payer/example/android/app/src/main/AndroidManifest.xml:3:5-66
+14-->/Users/akbarcp/Documents/projects/eduport/yt_payer/example/android/app/src/main/AndroidManifest.xml:3:22-64
 15
 16    <permission
 16-->[androidx.core:core:1.10.1] /Users/akbarcp/.gradle/caches/transforms-3/720f6cec70c671f10ddbe5054cc705d8/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
@@ -57,13 +57,13 @@
 49            android:value="2" />
 50
 51        <activity
-51-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+51-->[:url_launcher_android] /Users/akbarcp/Documents/projects/eduport/yt_payer/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
 52            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-52-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+52-->[:url_launcher_android] /Users/akbarcp/Documents/projects/eduport/yt_payer/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
 53            android:exported="false"
-53-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+53-->[:url_launcher_android] /Users/akbarcp/Documents/projects/eduport/yt_payer/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
 54            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-54-->[:url_launcher_android] /Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+54-->[:url_launcher_android] /Users/akbarcp/Documents/projects/eduport/yt_payer/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
 55
 56        <uses-library
 56-->[androidx.window:window:1.0.0-beta04] /Users/akbarcp/.gradle/caches/transforms-3/0501a7e5f97d5d1a45fef16b70b6e940/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40

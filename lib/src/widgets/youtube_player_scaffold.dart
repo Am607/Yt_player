@@ -22,6 +22,7 @@ class YoutubePlayerScaffold extends StatefulWidget {
     required this.controller,
     this.aspectRatio = 16 / 9,
     this.autoFullScreen = true,
+    required this.isBackVisible,
     required this.width,
     this.defaultOrientations = DeviceOrientation.values,
     this.gestureRecognizers = const <Factory<OneSequenceGestureRecognizer>>{},
@@ -45,6 +46,8 @@ class YoutubePlayerScaffold extends StatefulWidget {
   final YoutubePlayerController controller;
 
   final double width;
+
+  final bool isBackVisible;
 
   /// The aspect ratio of the player.
   ///
@@ -119,12 +122,13 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
       key: _playerKey,
       child: Builder(builder: (context) {
         return Container(
-          width: MediaQuery.of(context).size.width,
+          // width: widget.width,
           color: Colors.black,
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 300),
             child: Stack(
               children: [
+                SizedBox(width: double.infinity, height: double.infinity),
                 Center(
                   child: AspectRatio(
                     aspectRatio: 16 / 9,
@@ -260,164 +264,170 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     },
                   ),
                 ),
-                Positioned(
-                  left: 0,
+                Positioned.fill(
                   top: 0,
-                  child: YoutubeValueBuilder(builder: (context, value) {
-                    return Visibility(
-                      visible: value.isControlsVisible,
-                      child: SizedBox(
-                        width: widget.width,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(11, 12, 11, 0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              // YoutubeValueBuilder(
-                              //   builder: (context, value) {
-                              //     return IconButton(
-                              //       icon: Icon(
-                              //         color: Colors.white,
-                              //         size: 30,
-                              //         value.playerState == PlayerState.playing ? Icons.pause : Icons.play_arrow,
-                              //       ),
-                              //       onPressed: () {
-                              //         log('tapping');
-                              //         value.playerState == PlayerState.playing
-                              //             ? context.ytController.pauseVideo()
-                              //             : context.ytController.playVideo();
-                              //       },
-                              //     );
-                              //   },
-                              // ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  width: 31,
-                                  height: 31,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    // color: const Color(0xff263047).withOpacity(.8),
-                                    color: Colors.white.withOpacity(.8),
-                                  ),
-                                  child: const Center(
-                                    child: Icon(Icons.arrow_back),
-                                  ),
-                                ),
-                              ),
-                              InkWell(
-                                child: const Icon(
-                                  color: Colors.white,
-                                  size: 30,
-                                  Icons.settings,
-                                ),
-                                onTap: () {
-                                  showSettingsBottomSheet(context, widget.controller);
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
-                ),
-                YoutubeValueBuilder(builder: (context, value) {
-                  return Positioned(
-                      left: 0,
-                      bottom: 0,
-                      child: Visibility(
-                        visible: value.isControlsVisible,
-                        child: Builder(builder: (context) {
-                          return SizedBox(
-                            // width: MediaQuery.of(context).size.width,
-                         width: widget.width,
-                            child: ConstrainedBox(
-                              constraints: const BoxConstraints(),
-                              child: Column(
-                                // mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.end,
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: YoutubeValueBuilder(builder: (context, value) {
+                      return Builder(builder: (context) {
+                        return SizedBox(
+                          // width: MediaQuery.of(context).size.width,
+                          width: MediaQuery.of(context).size.width - widget.width,
+                          child: Visibility(
+                            visible: value.isControlsVisible,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(11, 12, 11, 0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 25),
-                                        child: StreamBuilder<YoutubeVideoState>(
-                                          initialData: const YoutubeVideoState(),
-                                          stream: widget.controller.videoStateStream,
-                                          builder: (context, snapshot) {
-                                            final position = snapshot.data?.position.inSeconds ?? 0;
-                                            final duration = context.ytController.metadata.duration.inSeconds;
-
-                                            String intToTime(int value) {
-                                              int h, m, s;
-                                              String hh, mm, ss, r;
-
-                                              h = value ~/ 3600;
-
-                                              m = ((value - h * 3600)) ~/ 60;
-
-                                              s = value % 60;
-
-                                              hh = h.toString().padLeft(2, '0');
-                                              mm = m.toString().padLeft(2, '0');
-                                              ss = s.toString().padLeft(2, '0');
-
-                                              if (hh == '00') {
-                                                r = '$mm:$ss';
-                                              } else {
-                                                r = '$hh:$mm:$ss';
-                                              }
-                                              return r;
-                                            }
-
-                                            return Text(
-                                              '${intToTime(position)} / ${intToTime(duration)}',
-                                              style: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w600),
-                                            );
-                                          },
+                                  Visibility(
+                                    replacement: SizedBox(
+                                      width: 20,
+                                    ),
+                                    visible: widget.isBackVisible,
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                        width: 31,
+                                        height: 31,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          // color: const Color(0xff263047).withOpacity(.8),
+                                          color: Colors.white.withOpacity(.8),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 15),
-                                        child: InkWell(
-                                          child: const Icon(
-                                            color: Colors.white,
-                                            size: 30,
-                                            Icons.fullscreen,
-                                          ),
-                                          onTap: () {
-                                            value.fullScreenOption.enabled
-                                                ? widget.controller.exitFullScreen()
-                                                : widget.controller.enterFullScreen();
-                                          },
+                                        child: const Center(
+                                          child: Icon(Icons.arrow_back),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(bottom: 20),
-                                    child: SizedBox(
-                                      height: 10,
-                                      child: Row(
-                                        children: [
-                                          Expanded(
-                                            child: const VideoPositionSeeker(),
-                                          ),
-                                        ],
                                       ),
                                     ),
+                                  ),
+                                  // Spacer(),
+                                  InkWell(
+                                    child: const Icon(
+                                      color: Colors.white,
+                                      size: 30,
+                                      Icons.settings,
+                                    ),
+                                    onTap: () {
+                                      showSettingsBottomSheet(context, widget.controller);
+                                    },
                                   ),
                                 ],
                               ),
                             ),
-                          );
-                        }),
+                          ),
+                        );
+                      });
+                    }),
+                  ),
+                ),
+                YoutubeValueBuilder(builder: (context, value) {
+                  return Positioned.fill(
+                      // left: 0,
+                      // right: 0,
+                      // top: 0,
+                      bottom: 0,
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Visibility(
+                          visible: value.isControlsVisible,
+                          child: Builder(builder: (context) {
+                            return SizedBox(
+                              width: MediaQuery.of(context).size.width - widget.width,
+                              child: ConstrainedBox(
+                                constraints: const BoxConstraints(),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  // mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      // mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 25),
+                                          child: StreamBuilder<YoutubeVideoState>(
+                                            initialData: const YoutubeVideoState(),
+                                            stream: widget.controller.videoStateStream,
+                                            builder: (context, snapshot) {
+                                              final position = snapshot.data?.position.inSeconds ?? 0;
+                                              final duration =
+                                                  context.ytController.metadata.duration.inSeconds;
+
+                                              String intToTime(int value) {
+                                                int h, m, s;
+                                                String hh, mm, ss, r;
+
+                                                h = value ~/ 3600;
+
+                                                m = ((value - h * 3600)) ~/ 60;
+
+                                                s = value % 60;
+
+                                                hh = h.toString().padLeft(2, '0');
+                                                mm = m.toString().padLeft(2, '0');
+                                                ss = s.toString().padLeft(2, '0');
+
+                                                if (hh == '00') {
+                                                  r = '$mm:$ss';
+                                                } else {
+                                                  r = '$hh:$mm:$ss';
+                                                }
+                                                return r;
+                                              }
+
+                                              return Text(
+                                                '${intToTime(position)} / ${intToTime(duration)}',
+                                                style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w600),
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                        // Spacer(),
+                                        Padding(
+                                          padding: const EdgeInsets.only(right: 18),
+                                          child: InkWell(
+                                            child: const Icon(
+                                              color: Colors.white,
+                                              size: 30,
+                                              Icons.fullscreen,
+                                            ),
+                                            onTap: () {
+                                              value.fullScreenOption.enabled
+                                                  ? widget.controller.exitFullScreen()
+                                                  : widget.controller.enterFullScreen();
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 20),
+                                      child: SizedBox(
+                                        height: 10,
+                                        width: MediaQuery.of(context).size.width - widget.width,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Expanded(
+                                              child: const VideoPositionSeeker(),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                        ),
                       ));
                 })
               ],
