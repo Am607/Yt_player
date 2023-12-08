@@ -164,7 +164,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
         body: Builder(builder: (context) {
           return YoutubePlayerScaffold(
             isBackVisible: false,
-            width: 0,
+            width: 100,
             aspectRatio: 16 / 9,
             // autoFullScreen: true,
             controller: _controller,
