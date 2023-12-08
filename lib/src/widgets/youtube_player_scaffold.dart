@@ -22,6 +22,7 @@ class YoutubePlayerScaffold extends StatefulWidget {
     required this.controller,
     this.aspectRatio = 16 / 9,
     this.autoFullScreen = true,
+    required this.width,
     this.defaultOrientations = DeviceOrientation.values,
     this.gestureRecognizers = const <Factory<OneSequenceGestureRecognizer>>{},
     this.fullscreenOrientations = const [
@@ -42,6 +43,8 @@ class YoutubePlayerScaffold extends StatefulWidget {
 
   /// The player controller.
   final YoutubePlayerController controller;
+
+  final double width;
 
   /// The aspect ratio of the player.
   ///
@@ -264,7 +267,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     return Visibility(
                       visible: value.isControlsVisible,
                       child: SizedBox(
-                        width: MediaQuery.of(context).size.width,
+                        width: widget.width,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(11, 12, 11, 0),
                           child: Row(
@@ -328,7 +331,8 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                         visible: value.isControlsVisible,
                         child: Builder(builder: (context) {
                           return SizedBox(
-                            width: MediaQuery.of(context).size.width,
+                            // width: MediaQuery.of(context).size.width,
+                         width: widget.width,
                             child: ConstrainedBox(
                               constraints: const BoxConstraints(),
                               child: Column(

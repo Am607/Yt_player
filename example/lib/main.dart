@@ -162,6 +162,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
     return SafeArea(
       child: Scaffold(
         body: YoutubePlayerScaffold(
+          width: MediaQuery.of(context).size.width - 48,
           aspectRatio: 16 / 9,
           // autoFullScreen: true,
           controller: _controller,
@@ -171,7 +172,12 @@ class _PlayerDemoState extends State<PlayerDemo> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Flexible(child: AspectRatio(aspectRatio: 16 / 9, child: player)),
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      child: AspectRatio(aspectRatio: 16 / 9, child: player),
+                    ),
+                  ),
                   Visibility(
                     // visible: MediaQuery.of(context).orientation == Orientation.portrait,
                     visible: true,
@@ -520,6 +526,7 @@ class _YoutubeAppDemoState extends State<YoutubeAppDemo> {
   @override
   Widget build(BuildContext context) {
     return YoutubePlayerScaffold(
+      width: MediaQuery.of(context).size.width - 48,
       controller: _controller,
       builder: (context, player) {
         return Scaffold(

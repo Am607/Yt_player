@@ -7,6 +7,6 @@ module url_launcher_ios {
 
 
 module url_launcher_ios.Swift {
-  header "/Users/akbarcp/Desktop/test_apps/youtube_player_flutter/packages/youtube_player_iframe/example/build/ios/Debug-iphonesimulator/url_launcher_ios/Swift Compatibility Header/url_launcher_ios-Swift.h"
+  header "/Users/akbarcp/Documents/projects/eduport/yt_payer/example/build/ios/Debug-iphonesimulator/url_launcher_ios/Swift Compatibility Header/url_launcher_ios-Swift.h"
   requires objc
 }
