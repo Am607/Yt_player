@@ -5,7 +5,6 @@
 import 'dart:async';
 import 'dart:developer';
 
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -190,10 +189,10 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
 
                                 return IconButton(
                                   icon: const Icon(
-                                    color: Colors.white,
-                                    size: 30,
-                                    Icons.skip_previous,
-                                  ),
+                                      color: Colors.white,
+                                      size: 30,
+                                      // Icons.skip_previous,
+                                      Icons.keyboard_double_arrow_left),
                                   onPressed: () async {
                                     // if (position >= 10) {
                                     await widget.controller.seekTo(seconds: position - 10);
@@ -232,10 +231,10 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                 // var pressedCount = 0;
                                 return IconButton(
                                   icon: const Icon(
-                                    color: Colors.white,
-                                    size: 30,
-                                    Icons.skip_next,
-                                  ),
+                                      color: Colors.white,
+                                      size: 30,
+                                      // Icons.skip_next,
+                                      Icons.keyboard_double_arrow_right),
                                   onPressed: () async {
                                     await widget.controller.seekTo(seconds: (position + 10));
                                     await widget.controller.playVideo();
@@ -394,10 +393,12 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                         Padding(
                                           padding: const EdgeInsets.only(right: 18),
                                           child: InkWell(
-                                            child: const Icon(
+                                            child: Icon(
                                               color: Colors.white,
                                               size: 30,
-                                              Icons.fullscreen,
+                                              value.fullScreenOption.enabled
+                                                  ? Icons.fullscreen_exit
+                                                  : Icons.fullscreen,
                                             ),
                                             onTap: () {
                                               value.fullScreenOption.enabled
