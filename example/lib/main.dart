@@ -47,8 +47,27 @@ class YoutubeApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       // home: Test(),
-      home: PlayerDemo(),
+      home: MainApp(),
       // home: YoutubeAppDemo(),
+    );
+  }
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: TextButton(
+              child: Text('go'),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: ((context) => PlayerDemo())));
+              }),
+        ),
+      ),
     );
   }
 }
@@ -530,6 +549,7 @@ class _YoutubeAppDemoState extends State<YoutubeAppDemo> {
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
       return YoutubePlayerScaffold(
+        
         isBackVisible: true,
         width: MediaQuery.of(context).size.width - 48,
         controller: _controller,

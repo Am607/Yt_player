@@ -5,6 +5,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -102,6 +103,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
 
   timerStart() {
     _hideControlsTimer = Timer(const Duration(seconds: 7), () {
+      // if(widget.controller)
       widget.controller.update(isControlsVisible: false);
       log('calling timer');
     });
@@ -451,8 +453,8 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                   fullscreenOrientations: widget.fullscreenOrientations,
                   lockedOrientations: widget.lockedOrientations,
                   fullScreenOption: value.fullScreenOption,
-                  child: OrientationBuilder(
-                    builder: (context, c) {
+                  child: Builder(
+                    builder: (context) {
                       if (value.fullScreenOption.enabled) return Center(child: player);
                       return widget.builder(context, player);
                     },
