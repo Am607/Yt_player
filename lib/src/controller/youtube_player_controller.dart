@@ -265,7 +265,7 @@ class YoutubePlayerController implements YoutubePlayerIFrameAPI {
     String? baseUrl,
   }) async {
     final playerHtml = await rootBundle.loadString(
-      'packages/youtube_player_iframe/assets/player.html',
+    kIsWeb?'packages/youtube_player_iframe/assets/web_player.html':  'packages/youtube_player_iframe/assets/player.html',
     );
 
     final platform = kIsWeb ? 'web' : defaultTargetPlatform.name.toLowerCase();
