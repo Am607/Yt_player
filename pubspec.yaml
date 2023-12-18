@@ -25,6 +25,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/player.html
+    - assets/web_player.html
 
   plugin:
     platforms:
