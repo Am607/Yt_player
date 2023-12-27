@@ -288,7 +288,9 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     ),
                                     visible: widget.isBackVisible,
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
                                       child: Container(
                                         width: 31,
                                         height: 31,
@@ -497,7 +499,7 @@ class VideoPositionSeeker extends StatelessWidget {
                 inactiveColor: const Color(0xffF4F1FF).withOpacity(.5),
                 value: value <= 1 ? value : 1,
                 onChanged: (positionFraction) {
-                  value = positionFraction ;
+                  value = positionFraction;
                   setState(() {});
                   context.ytController.seekTo(
                     seconds: (value * duration).toDouble(),
