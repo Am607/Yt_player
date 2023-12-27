@@ -118,6 +118,11 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final player = KeyedSubtree(
       key: _playerKey,
