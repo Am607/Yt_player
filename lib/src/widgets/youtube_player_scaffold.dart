@@ -67,7 +67,7 @@ class YoutubePlayerScaffold extends StatefulWidget {
   /// The orientations that are used when not in fullscreen and auto rotate is disabled.
   final List<DeviceOrientation> lockedOrientations;
 
-  final  void Function()? function;
+  final void Function()? function;
 
   /// Enables switching full screen mode on vertical drag in the player.
   ///
@@ -296,7 +296,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     ),
                                     visible: widget.isBackVisible,
                                     child: InkWell(
-                                      onTap:  widget.function,
+                                      onTap: widget.function,
                                       child: Container(
                                         width: 31,
                                         height: 31,
