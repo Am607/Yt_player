@@ -104,7 +104,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
   }
 
   timerStart() {
-    _hideControlsTimer = Timer(const Duration(seconds: 7), () {
+    _hideControlsTimer = Timer(const Duration(seconds: 5), () {
       // if(widget.controller)
       widget.controller.update(isControlsVisible: false);
       log('calling timer');
