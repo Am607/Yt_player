@@ -275,7 +275,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.7"
+    version: "1.0.8"
   youtube_player_iframe_web:
     dependency: transitive
     description:

@@ -21,6 +21,7 @@ class YoutubePlayerScaffold extends StatefulWidget {
     required this.builder,
     required this.controller,
     this.aspectRatio = 16 / 9,
+    this.function,
     this.autoFullScreen = true,
     required this.isBackVisible,
     required this.width,
@@ -65,6 +66,8 @@ class YoutubePlayerScaffold extends StatefulWidget {
 
   /// The orientations that are used when not in fullscreen and auto rotate is disabled.
   final List<DeviceOrientation> lockedOrientations;
+
+  final  void Function()? function;
 
   /// Enables switching full screen mode on vertical drag in the player.
   ///
@@ -293,9 +296,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     ),
                                     visible: widget.isBackVisible,
                                     child: InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).pop();
-                                      },
+                                      onTap:  widget.function,
                                       child: Container(
                                         width: 31,
                                         height: 31,
