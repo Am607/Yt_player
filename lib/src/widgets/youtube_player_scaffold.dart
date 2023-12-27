@@ -495,9 +495,9 @@ class VideoPositionSeeker extends StatelessWidget {
 
                 activeColor: const Color(0xffFF6028),
                 inactiveColor: const Color(0xffF4F1FF).withOpacity(.5),
-                value: value >= 1 ? value : 1,
+                value: value <= 1 ? value : 1,
                 onChanged: (positionFraction) {
-                  value = positionFraction;
+                  value = positionFraction ;
                   setState(() {});
                   context.ytController.seekTo(
                     seconds: (value * duration).toDouble(),
