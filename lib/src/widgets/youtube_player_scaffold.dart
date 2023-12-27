@@ -495,7 +495,7 @@ class VideoPositionSeeker extends StatelessWidget {
 
                 activeColor: const Color(0xffFF6028),
                 inactiveColor: const Color(0xffF4F1FF).withOpacity(.5),
-                value: value,
+                value: value >= 1 ? value : 1,
                 onChanged: (positionFraction) {
                   value = positionFraction;
                   setState(() {});
