@@ -12,59 +12,65 @@ Future<void> showSettingsBottomSheet(
     isDismissible: true,
     context: context,
     builder: (context) {
-      return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(24),
-          color: Colors.white,
-        ),
-        width: double.infinity,
-        height: 130,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 7,
-              ),
-              Container(
-                width: 44,
-                height: 5,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              // InkWell(
-              //   onTap: () {
-              //     Navigator.of(context).pop();
-              //     showPlayBackBottomSheet(context, controller);
-              //   },
-              //   child: const MainItem(
-              //     icons: Icons.settings,
-              //     mainText: ' Quality',
-              //     selectedText: 'Auto(360)',
-              //   ),
-              // ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pop();
-                  showPlayBackBottomSheet(context, controller);
-                },
-                child: FutureBuilder<double>(
-                    future: controller.playbackRate,
-                    builder: (context, snapshot) {
-                      return MainItem(
-                        icons: Icons.settings,
-                        mainText: 'PlayBackSpeed',
-                        selectedText:
-                            '${snapshot.data == 1.0 ? "Normal" : snapshot.data} ${snapshot.data == 1.0 ? '' : 'x'}',
-                      );
-                    }),
-              ),
-            ],
+      return SafeArea(
+        left: false,
+        top: false,
+        right: false,
+        bottom: false,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(24),
+            color: Colors.white,
+          ),
+          width: double.infinity,
+          height: 130,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 7,
+                ),
+                Container(
+                  width: 44,
+                  height: 5,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                // InkWell(
+                //   onTap: () {
+                //     Navigator.of(context).pop();
+                //     showPlayBackBottomSheet(context, controller);
+                //   },
+                //   child: const MainItem(
+                //     icons: Icons.settings,
+                //     mainText: ' Quality',
+                //     selectedText: 'Auto(360)',
+                //   ),
+                // ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    showPlayBackBottomSheet(context, controller);
+                  },
+                  child: FutureBuilder<double>(
+                      future: controller.playbackRate,
+                      builder: (context, snapshot) {
+                        return MainItem(
+                          icons: Icons.settings,
+                          mainText: 'PlayBackSpeed',
+                          selectedText:
+                              '${snapshot.data == 1.0 ? "Normal" : snapshot.data} ${snapshot.data == 1.0 ? '' : 'x'}',
+                        );
+                      }),
+                ),
+              ],
+            ),
           ),
         ),
       );
@@ -82,49 +88,51 @@ Future<void> showPlayBackBottomSheet(
     isDismissible: true,
     context: context,
     builder: (context) {
-      return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(24),
-          color: Colors.white,
-        ),
-        width: double.infinity,
-        // height: 166,
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 25, top: 7),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 44,
-                height: 5,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Column(
-                children: List.generate(
-                  PlaybackRate.all.length,
-                  (index) => InkWell(
-                    onTap: () {
-                      controller.setPlaybackRate(PlaybackRate.all[index]);
-                      Navigator.of(context).pop();
-                    },
-                    child: FutureBuilder<double>(
-                        future: controller.playbackRate,
-                        builder: (context, s) {
-                          return SubMenuItem(
-                            isSelected: s.data == PlaybackRate.all[index],
-                            mainText:
-                                '${PlaybackRate.all[index] == 1.0 ? "Normal" : PlaybackRate.all[index]} ${PlaybackRate.all[index] == 1.0 ? '' : 'x'}',
-                          );
-                        }),
-                  ),
+      return SafeArea(
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+            color: Colors.white,
+          ),
+          width: double.infinity,
+          // height: 166,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 7),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: 44,
+                  height: 5,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 16,
+                ),
+                Column(
+                  children: List.generate(
+                    PlaybackRate.all.length,
+                    (index) => InkWell(
+                      onTap: () {
+                        controller.setPlaybackRate(PlaybackRate.all[index]);
+                        Navigator.of(context).pop();
+                      },
+                      child: FutureBuilder<double>(
+                          future: controller.playbackRate,
+                          builder: (context, s) {
+                            return SubMenuItem(
+                              isSelected: s.data == PlaybackRate.all[index],
+                              mainText:
+                                  '${PlaybackRate.all[index] == 1.0 ? "Normal" : PlaybackRate.all[index]} ${PlaybackRate.all[index] == 1.0 ? '' : 'x'}',
+                            );
+                          }),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );

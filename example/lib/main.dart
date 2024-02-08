@@ -7,6 +7,7 @@ import 'dart:developer';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'package:youtube_player_iframe_example/new_wdget.dart';
 import 'package:youtube_player_iframe_example/video_list_page.dart';
 
 import 'widgets/meta_data_section.dart';
@@ -140,6 +141,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
         showFullscreenButton: true,
         pointerEvents: PointerEvents.none,
         loop: false,
+
         showVideoAnnotations: false,
         strictRelatedVideos: true,
         enableCaption: false,
@@ -156,7 +158,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
 
     // _controller.loadPlaylist(
     //   list: _videoIds,
-    //   listType: ListType.playlist,
+    //   listType: ListType.playlist,z
     //   startSeconds: 136,
     // );
 
@@ -164,7 +166,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
   }
 
   initFunction() async {
-    await _controller.loadVideoById(videoId: 'xBym4WAZMoA');
+    await _controller.loadVideoById(videoId: '36YnV9STBqc');
     //live
     // await _controller.loadVideoById(videoId: 'Tz1G8UbeS3Q');
     //unlisted
@@ -181,8 +183,10 @@ class _PlayerDemoState extends State<PlayerDemo> {
     return SafeArea(
       child: Scaffold(
         body: Builder(builder: (context) {
-          return YoutubePlayerScaffold(
+          return YoutubePlayerScaffoldL(
             isBackVisible: false,
+            isLive: true,
+            liveStartTime: DateTime.now(),
             width: 100,
             aspectRatio: 16 / 9,
             // autoFullScreen: true,
@@ -199,28 +203,28 @@ class _PlayerDemoState extends State<PlayerDemo> {
                         child: AspectRatio(aspectRatio: 16 / 9, child: player),
                       ),
                     ),
-                    Visibility(
-                      // visible: MediaQuery.of(context).orientation == Orientation.portrait,
-                      visible: true,
-                      child: Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              showQualityBottomSheet(context);
-                            },
-                            child: const ListTile(
-                              title: Text('this card a '),
-                            ),
-                          ),
-                          InkWell(
-                              onTap: () {
-                                showSettingsBottomSheet(context);
-                              },
-                              child: const ListTile(title: Text('this card a '))),
-                          const ListTile(title: Text('this card a ')),
-                        ],
-                      ),
-                    )
+                    // Visibility(
+                    //   // visible: MediaQuery.of(context).orientation == Orientation.portrait,
+                    //   visible: true,
+                    //   child: Column(
+                    //     children: [
+                    //       InkWell(
+                    //         onTap: () {
+                    //           showQualityBottomSheet(context);
+                    //         },
+                    //         child: const ListTile(
+                    //           title: Text('this card a '),
+                    //         ),
+                    //       ),
+                    //       InkWell(
+                    //           onTap: () {
+                    //             showSettingsBottomSheet(context);
+                    //           },
+                    //           child: const ListTile(title: Text('this card a '))),
+                    //       const ListTile(title: Text('this card a ')),
+                    //     ],
+                    //   ),
+                    // )
                   ],
                 ),
               );
@@ -549,7 +553,6 @@ class _YoutubeAppDemoState extends State<YoutubeAppDemo> {
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
       return YoutubePlayerScaffold(
-        
         isBackVisible: true,
         width: MediaQuery.of(context).size.width - 48,
         controller: _controller,

@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		8ttlK7PwCjSSF4AL3qv1I23Ggkw=
+		Jj/ysA7B6P+G7n8ZCak1MYJ2OQc=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		hCTsrMuzaHxrGtYu5vRK2yrD7bs=
+		6DjLypYqfBnQ0XLdsX5VKAfnrU0=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		tpBzxrQEv+oPIQD4qmEPrRjsl7U=
+		Ix0ItcsEedAEhEWH1vQlE2WA4Fk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		V+8a0oT9Ckog/VPFmo3frJORpEw=
+		C3W1L5OoMvM61g2BQwTHRYfWGXE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		U580waTvYgR3blE18p3guyPh+yw=
+		5/ZXdlQyxVOit+BaJwWWAuJGqps=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -82,11 +82,15 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		jYEED8Dzun142oNznVyWLewrjxQ=
+		gT4/CK+hvMVLBXA03RDNT22sXZw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
 		<data>
 		REgA5T/5cY9hQbzDz7W9rw7lnb8=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>
+		<data>
+		GoYMiche2oRg7wOGCrxacsAsOww=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -216,7 +220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WQUsWIYotuMJud9bJ4PlfCI736bsOsHMziSN/v/ZMbQ=
+			Kworj/B66vb5VGr5QtKT5tz0rQP4n5Gdowj0jjLmyCU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -265,7 +269,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7z7daC+bVMwmHRLwAx30uoE5xKiytfQMAw1K4BwPzuM=
+			xVWNxlPmw7GweRTbcPque/bKoaG0q1Wp36+ZxE2r5ck=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -279,21 +283,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mCAhyuzkIrOKSNuFOy0LgHeU44r9L3Sd95RXlF8cYLE=
+			G0mve7RXttVA1MDDiFq8qEUu6ZKmrO/5Bgn/juN/1RY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			in7xRq5AtrEQ5zquM80aw/UcwfJ/+0jRjB0mtrDTFZU=
+			bO0jWTF/OPBWcuhO+UAjSKNMhqI4SJ0KlmbbUPdFyW4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SfiNtCbxrlA3xelCJKWZdGbZLyS9RFhvBtfH9YzkvRo=
+			D2A/017mqz13c1j+ky0UinUGaKNe3NiuTa1MOTwm1AU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -328,7 +332,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5xzcxg05Iw5H4f7kGcWruoSNYN+BArX603t+xw7U5V8=
+			TwBN4UriiRNniuuddctRZQviMghKeauNeuStAVRBKDU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
@@ -336,6 +340,13 @@
 			<key>hash2</key>
 			<data>
 			Bot5sirSC3h6o5X5fw9KWzJbRQAWM3q23qp70s/z/XM=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kL3SzjufatkRCfarh8CKhUa7/s672L00DTgRYFBLToA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>

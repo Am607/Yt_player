@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		V+8a0oT9Ckog/VPFmo3frJORpEw=
+		C3W1L5OoMvM61g2BQwTHRYfWGXE=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		U580waTvYgR3blE18p3guyPh+yw=
+		5/ZXdlQyxVOit+BaJwWWAuJGqps=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -34,11 +34,15 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		jYEED8Dzun142oNznVyWLewrjxQ=
+		gT4/CK+hvMVLBXA03RDNT22sXZw=
 		</data>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
 		<data>
 		REgA5T/5cY9hQbzDz7W9rw7lnb8=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>
+		<data>
+		GoYMiche2oRg7wOGCrxacsAsOww=
 		</data>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -55,14 +59,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			in7xRq5AtrEQ5zquM80aw/UcwfJ/+0jRjB0mtrDTFZU=
+			bO0jWTF/OPBWcuhO+UAjSKNMhqI4SJ0KlmbbUPdFyW4=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SfiNtCbxrlA3xelCJKWZdGbZLyS9RFhvBtfH9YzkvRo=
+			D2A/017mqz13c1j+ky0UinUGaKNe3NiuTa1MOTwm1AU=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -97,7 +101,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5xzcxg05Iw5H4f7kGcWruoSNYN+BArX603t+xw7U5V8=
+			TwBN4UriiRNniuuddctRZQviMghKeauNeuStAVRBKDU=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
@@ -105,6 +109,13 @@
 			<key>hash2</key>
 			<data>
 			Bot5sirSC3h6o5X5fw9KWzJbRQAWM3q23qp70s/z/XM=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kL3SzjufatkRCfarh8CKhUa7/s672L00DTgRYFBLToA=
 			</data>
 		</dict>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
