@@ -87,7 +87,7 @@
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.7",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -141,21 +141,21 @@
     },
     {
       "name": "url_launcher_android",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_android-6.2.0",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_android-6.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "url_launcher_ios",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_ios-6.2.1",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_ios-6.2.4",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "url_launcher_linux",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_linux-3.1.0",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_linux-3.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "url_launcher_macos",
@@ -165,9 +165,9 @@
     },
     {
       "name": "url_launcher_platform_interface",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_platform_interface-2.2.0",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_platform_interface-2.3.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "url_launcher_web",
@@ -177,9 +177,9 @@
     },
     {
       "name": "url_launcher_windows",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.0",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "vector_math",
@@ -189,27 +189,27 @@
     },
     {
       "name": "webview_flutter",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter-4.4.2",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter-4.5.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "webview_flutter_android",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_android-3.12.1",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_android-3.15.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "webview_flutter_platform_interface",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-2.8.0",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-2.10.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "webview_flutter_wkwebview",
-      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.9.4",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.10.2",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "youtube_player_iframe_web",
@@ -224,7 +224,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2024-01-29T09:36:52.619484Z",
+  "generated": "2024-02-09T11:05:48.861600Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

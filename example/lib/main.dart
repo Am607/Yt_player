@@ -141,7 +141,6 @@ class _PlayerDemoState extends State<PlayerDemo> {
         showFullscreenButton: true,
         pointerEvents: PointerEvents.none,
         loop: false,
-
         showVideoAnnotations: false,
         strictRelatedVideos: true,
         enableCaption: false,
@@ -183,10 +182,9 @@ class _PlayerDemoState extends State<PlayerDemo> {
     return SafeArea(
       child: Scaffold(
         body: Builder(builder: (context) {
-          return YoutubePlayerScaffoldL(
+          return YoutubePlayerScaffold(
             isBackVisible: false,
-            isLive: true,
-            liveStartTime: DateTime.now(),
+
             width: 100,
             aspectRatio: 16 / 9,
             // autoFullScreen: true,

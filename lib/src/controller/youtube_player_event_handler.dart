@@ -24,8 +24,7 @@ class YoutubePlayerEventHandler {
   final YoutubePlayerController controller;
 
   /// The [YoutubeVideoState] stream controller.
-  final StreamController<YoutubeVideoState> videoStateController =
-      StreamController.broadcast();
+  final StreamController<YoutubeVideoState> videoStateController = StreamController.broadcast();
 
   final Completer<void> _readyCompleter = Completer();
   late final Map<String, ValueChanged<Object>> _events;
@@ -125,7 +124,9 @@ class YoutubePlayerEventHandler {
 
   /// This event fires when the player receives information about video states.
   void onVideoState(Object data) {
-    videoStateController.add(YoutubeVideoState.fromJson(data.toString()));
+    if (videoStateController.hasListener) {
+      videoStateController.add(YoutubeVideoState.fromJson(data.toString()));
+    }
   }
 
   /// Returns a [Future] that completes when the player is ready.
