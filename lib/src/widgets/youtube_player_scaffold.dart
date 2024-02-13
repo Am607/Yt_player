@@ -203,7 +203,10 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                       Icons.keyboard_double_arrow_left),
                                   onPressed: () async {
                                     // if (position >= 10) {
-                                    await widget.controller.seekTo(seconds: position - 10);
+                                    await widget.controller.seekTo(
+                                      seconds: position - 10,
+                                      allowSeekAhead: true,
+                                    );
                                     await widget.controller.playVideo();
 
                                     // }
@@ -244,7 +247,10 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                       // Icons.skip_next,
                                       Icons.keyboard_double_arrow_right),
                                   onPressed: () async {
-                                    await widget.controller.seekTo(seconds: (position + 10));
+                                    await widget.controller.seekTo(
+                                      seconds: (position + 10),
+                                      allowSeekAhead: true,
+                                    );
                                     await widget.controller.playVideo();
                                     // pressedCount += 1;
                                     // final duration = context.ytController.metadata.duration.inSeconds;

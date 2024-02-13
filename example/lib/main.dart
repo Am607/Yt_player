@@ -104,7 +104,7 @@ class _TestState extends State<Test> {
         };
       },
     );
-    _controller.loadVideoById(videoId: 'xBym4WAZMoA');
+    _controller.loadVideoById(videoId: '7DUbn2se7jk');
 
     // _controller.loadPlaylist(
     //   list: _videoIds,
@@ -165,7 +165,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
   }
 
   initFunction() async {
-    await _controller.loadVideoById(videoId: '36YnV9STBqc');
+    await _controller.loadVideoById(videoId: '7DUbn2se7jk');
     //live
     // await _controller.loadVideoById(videoId: 'Tz1G8UbeS3Q');
     //unlisted
