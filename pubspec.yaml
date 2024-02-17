@@ -26,6 +26,7 @@ flutter:
   assets:
     - assets/player.html
     - assets/web_player.html
+    - assets/player
 
   plugin:
     platforms:
