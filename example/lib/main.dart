@@ -47,8 +47,8 @@ class YoutubeApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       debugShowCheckedModeBanner: false,
-      // home: Test(),
-      home: MainApp(),
+      home: PlayerDemo(),
+      // home: MainApp(),
       // home: YoutubeAppDemo(),
     );
   }
@@ -165,7 +165,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
   }
 
   initFunction() async {
-    await _controller.loadVideoById(videoId: '7DUbn2se7jk');
+    await _controller.loadVideoById(videoId: 'VosOOo17GVk');
     //live
     // await _controller.loadVideoById(videoId: 'Tz1G8UbeS3Q');
     //unlisted
@@ -184,9 +184,9 @@ class _PlayerDemoState extends State<PlayerDemo> {
         body: Builder(builder: (context) {
           return YoutubePlayerScaffold(
             isBackVisible: false,
-
-            width: 100,
-            aspectRatio: 16 / 9,
+            // width: 100,
+            controlsPadding: 20,
+            // aspectRatio: 16 / 9,
             // autoFullScreen: true,
             controller: _controller,
             builder: (context, player) {
@@ -552,7 +552,7 @@ class _YoutubeAppDemoState extends State<YoutubeAppDemo> {
     return Builder(builder: (context) {
       return YoutubePlayerScaffold(
         isBackVisible: true,
-        width: MediaQuery.of(context).size.width - 48,
+        controlsPadding: MediaQuery.of(context).size.width - 48,
         controller: _controller,
         builder: (context, player) {
           return Scaffold(

@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		C3W1L5OoMvM61g2BQwTHRYfWGXE=
+		sNYBfCHEuCYMPi5517ppKMrqrps=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		5/ZXdlQyxVOit+BaJwWWAuJGqps=
+		5y+l/X5z23Ww+AFnt5w9HH9iFkM=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		ee/gS1tAfw7taTUswViT7OCLSkI=
+		+G+0gGeukPZW/ZQatf7l6YXVc8I=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -34,11 +34,47 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		zac3bhnWZa7otSSFTveWLRg8knE=
+		bKRI+RITvNLWxk7krwbO99LMKkQ=
 		</data>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
 		<data>
 		REgA5T/5cY9hQbzDz7W9rw7lnb8=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/exit_full_screen.svg</key>
+		<data>
+		dM1/3nTxjks55aTSsjL2lkcaPyk=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/full_screen.svg</key>
+		<data>
+		jj957qy223fKvUMchVqsEcyW6/0=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/new.png</key>
+		<data>
+		RQiLq9yIRo18mr2G33H09BgV8W4=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/pause.svg</key>
+		<data>
+		mzmdDkBbGgV3lxuy5G0fD22nREc=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/play.svg</key>
+		<data>
+		nmyX1L444Hg9lFPDi1334T+S6S4=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/quality.svg</key>
+		<data>
+		Oql02M22D/541+4+lDCWDOTjs0s=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/seek_back.svg</key>
+		<data>
+		wtwWXeEE6z2lMoDttcQyK+dz4Gg=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/seek_front.svg</key>
+		<data>
+		D21eBthq1wlDQIo+Yry9zSLFTjo=
+		</data>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/speed.svg</key>
+		<data>
+		t0TgWHvNANB2U3TdWMwzxsZeTRs=
 		</data>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>
 		<data>
@@ -59,14 +95,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bO0jWTF/OPBWcuhO+UAjSKNMhqI4SJ0KlmbbUPdFyW4=
+			QyllneXnYbQWpAVefEpnLUOFaM46PNKwrUNRIEPdcvY=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D2A/017mqz13c1j+ky0UinUGaKNe3NiuTa1MOTwm1AU=
+			Nu/497qybr7t+WOnDkA8HqqTOS/cVX/8hvvQxVMW4vE=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -80,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lAgUP9lND0gUxMQcjn8pYqLQp1ocaVHhgJM7VdpMnek=
+			2b/AJoOyqJH88CiWJVZ9gkMVdmG6lrch0iQd4Sl9GPg=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -101,7 +137,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BmMdgw1zV/gMy9wa5NMLBrSAqQAZAr+IbxXCB95O2lE=
+			hnlodcWZCwO7IGecgnwU7nwDzFjQ0OjCWrzf/Xdr71w=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/player.html</key>
@@ -109,6 +145,69 @@
 			<key>hash2</key>
 			<data>
 			Bot5sirSC3h6o5X5fw9KWzJbRQAWM3q23qp70s/z/XM=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/exit_full_screen.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QXq0XfMQdovD7JbYolVOFPKEps+Q7jI82lb5CStrukM=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/full_screen.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mmkiL9iV1U+4A9EWy7uXQQCRhlIiWrTcYGP+zSGjMEo=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/new.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ewSBQkCripu9BJkG19gyad6bt6hSrQ/VjRKDzmYxvmo=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/pause.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aJSU+B/1+5tohcS7a9MgIm0a96AKwphBTzBaPHgcuXk=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/play.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ir2Bx9rchHtyMJh9KnzfExE6+JEuyg79UcHi6D2h6bg=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/quality.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1mJCUtw3C4CP0mAKYdBysspgf8udYZidfaRofLR0teI=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/seek_back.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O5i0Cye0C/WbIzWp0UYXUh09HLQLiZqyHDh3KHOU7B4=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/seek_front.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V9TBfLx40Lzs3Tvf/t8Pk7wy49SA/55N3eO76FYYW4A=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/youtube_player_iframe/assets/player/speed.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wU0AlJqlB6a/Jk0seEJBScymIrx1lF4oc+DyEBnjHbw=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/youtube_player_iframe/assets/web_player.html</key>

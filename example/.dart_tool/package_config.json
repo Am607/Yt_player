@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "args",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/args-2.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
@@ -44,6 +50,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_svg",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/akbarcp/Documents/Developement/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -84,6 +96,18 @@
       "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/path_parsing-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/petitparser-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "plugin_platform_interface",
@@ -182,6 +206,24 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "vector_graphics",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/vector_graphics-1.1.10+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "vector_graphics_codec",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.10+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "vector_graphics_compiler",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.10+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -212,6 +254,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/akbarcp/.pub-cache/hosted/pub.dev/xml-6.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "youtube_player_iframe",
       "rootUri": "../../",
       "packageUri": "lib/",
@@ -230,7 +278,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2024-02-17T16:04:21.316300Z",
+  "generated": "2024-02-21T09:18:10.508160Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

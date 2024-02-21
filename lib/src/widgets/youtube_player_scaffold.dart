@@ -9,6 +9,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:youtube_player_iframe/src/helpers/images.dart';
 import 'package:youtube_player_iframe/src/widgets/widgets.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -24,7 +26,7 @@ class YoutubePlayerScaffold extends StatefulWidget {
     this.function,
     this.autoFullScreen = true,
     required this.isBackVisible,
-    required this.width,
+    required this.controlsPadding,
     this.defaultOrientations = DeviceOrientation.values,
     this.gestureRecognizers = const <Factory<OneSequenceGestureRecognizer>>{},
     this.fullscreenOrientations = const [
@@ -46,7 +48,8 @@ class YoutubePlayerScaffold extends StatefulWidget {
   /// The player controller.
   final YoutubePlayerController controller;
 
-  final double width;
+  /// Padding for controls
+  final double controlsPadding;
 
   final bool isBackVisible;
 
@@ -127,11 +130,34 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
 
   @override
   Widget build(BuildContext context) {
+    //Function for time parse
+    String intToTime(int value) {
+      int h, m, s;
+      String hh, mm, ss, r;
+
+      h = value ~/ 3600;
+
+      m = ((value - h * 3600)) ~/ 60;
+
+      s = value % 60;
+
+      hh = h.toString().padLeft(2, '0');
+      mm = m.toString().padLeft(2, '0');
+      ss = s.toString().padLeft(2, '0');
+
+      if (hh == '00') {
+        r = '$mm:$ss';
+      } else {
+        r = '$hh:$mm:$ss';
+      }
+      return r;
+    }
+
     final player = KeyedSubtree(
       key: _playerKey,
       child: Builder(builder: (context) {
         return Container(
-          // width: widget.width,
+          // width: widget.controlsPadding,
           color: Colors.black,
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 300),
@@ -173,6 +199,8 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     ),
                   );
                 }),
+
+                //!  Center controls
                 Positioned(
                   right: 0,
                   bottom: 0,
@@ -195,13 +223,8 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                               builder: (context, snapshot) {
                                 final position = snapshot.data?.position.inSeconds ?? 0;
 
-                                return IconButton(
-                                  icon: const Icon(
-                                      color: Colors.white,
-                                      size: 30,
-                                      // Icons.skip_previous,
-                                      Icons.keyboard_double_arrow_left),
-                                  onPressed: () async {
+                                return InkWell(
+                                  onTap: () async {
                                     // if (position >= 10) {
                                     await widget.controller.seekTo(
                                       seconds: position - 10,
@@ -211,27 +234,43 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
 
                                     // }
                                   },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                                    child: SvgPicture.asset(
+                                      PlayerImages.seekBack,
+                                      width: 28,
+                                      height: 28,
+                                    ),
+                                  ),
                                 );
                               },
                             ),
                             const SizedBox(
-                              width: 70,
+                              width: 5,
                             ),
-                            IconButton(
-                              icon: Icon(
-                                color: Colors.white,
-                                size: 30,
-                                value.playerState == PlayerState.playing ? Icons.pause : Icons.play_arrow,
-                              ),
-                              onPressed: () {
-                                log('tapping');
+                            InkWell(
+                              onTap: () {
                                 value.playerState == PlayerState.playing
                                     ? context.ytController.pauseVideo()
                                     : context.ytController.playVideo();
                               },
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                                child: value.playerState == PlayerState.playing
+                                    ? SvgPicture.asset(
+                                        PlayerImages.pause,
+                                        width: 28,
+                                        height: 28,
+                                      )
+                                    : SvgPicture.asset(
+                                        PlayerImages.play,
+                                        width: 28,
+                                        height: 28,
+                                      ),
+                              ),
                             ),
                             const SizedBox(
-                              width: 70,
+                              width: 5,
                             ),
                             StreamBuilder<YoutubeVideoState>(
                               initialData: YoutubeVideoState(),
@@ -240,13 +279,8 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                 var position = snapshot.data?.position.inSeconds ?? 0;
                                 // var lastPosition = 0;
                                 // var pressedCount = 0;
-                                return IconButton(
-                                  icon: const Icon(
-                                      color: Colors.white,
-                                      size: 30,
-                                      // Icons.skip_next,
-                                      Icons.keyboard_double_arrow_right),
-                                  onPressed: () async {
+                                return InkWell(
+                                  onTap: () async {
                                     await widget.controller.seekTo(
                                       seconds: (position + 10),
                                       allowSeekAhead: true,
@@ -270,6 +304,14 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     //       .seekTo(seconds: (position + 10).toDouble());
                                     // }
                                   },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                                    child: SvgPicture.asset(
+                                      PlayerImages.seekFront,
+                                      width: 28,
+                                      height: 28,
+                                    ),
+                                  ),
                                 );
                               },
                             ),
@@ -287,7 +329,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                       return Builder(builder: (context) {
                         return SizedBox(
                           // width: MediaQuery.of(context).size.width,
-                          width: MediaQuery.of(context).size.width - widget.width,
+                          width: MediaQuery.of(context).size.width - widget.controlsPadding,
                           child: Visibility(
                             visible: value.isControlsVisible,
                             child: Padding(
@@ -337,109 +379,82 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     }),
                   ),
                 ),
+
+                //! Seek bar
                 YoutubeValueBuilder(builder: (context, value) {
                   return Positioned.fill(
-                      // left: 0,
-                      // right: 0,
-                      // top: 0,
                       bottom: 0,
                       child: Align(
                         alignment: Alignment.bottomCenter,
                         child: Visibility(
                           visible: value.isControlsVisible,
                           child: Builder(builder: (context) {
-                            return SizedBox(
-                              width: MediaQuery.of(context).size.width - widget.width,
-                              child: ConstrainedBox(
-                                constraints: const BoxConstraints(),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  // mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      // mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 25),
-                                          child: StreamBuilder<YoutubeVideoState>(
-                                            initialData: const YoutubeVideoState(),
-                                            stream: widget.controller.videoStateStream,
-                                            builder: (context, snapshot) {
-                                              final position = snapshot.data?.position.inSeconds ?? 0;
-                                              final duration =
-                                                  context.ytController.metadata.duration.inSeconds;
+                            return ConstrainedBox(
+                              constraints: const BoxConstraints(),
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 10),
+                                child: SizedBox(
+                                  height: 20,
+                                  width: MediaQuery.of(context).size.width - widget.controlsPadding,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      StreamBuilder<YoutubeVideoState>(
+                                        initialData: const YoutubeVideoState(),
+                                        stream: widget.controller.videoStateStream,
+                                        builder: (context, snapshot) {
+                                          final position = snapshot.data?.position.inSeconds ?? 0;
 
-                                              String intToTime(int value) {
-                                                int h, m, s;
-                                                String hh, mm, ss, r;
-
-                                                h = value ~/ 3600;
-
-                                                m = ((value - h * 3600)) ~/ 60;
-
-                                                s = value % 60;
-
-                                                hh = h.toString().padLeft(2, '0');
-                                                mm = m.toString().padLeft(2, '0');
-                                                ss = s.toString().padLeft(2, '0');
-
-                                                if (hh == '00') {
-                                                  r = '$mm:$ss';
-                                                } else {
-                                                  r = '$hh:$mm:$ss';
-                                                }
-                                                return r;
-                                              }
-
-                                              return Text(
-                                                '${intToTime(position)} / ${intToTime(duration)}',
-                                                style: const TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.w600),
-                                              );
-                                            },
+                                          return Text(
+                                            intToTime(position),
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400),
+                                          );
+                                        },
+                                      ),
+                                      Expanded(
+                                        child: const VideoPositionSeeker(),
+                                      ),
+                                      StreamBuilder<YoutubeVideoState>(
+                                        initialData: const YoutubeVideoState(),
+                                        stream: widget.controller.videoStateStream,
+                                        builder: (context, snapshot) {
+                                          final duration = context.ytController.metadata.duration.inSeconds;
+                                          return Text(
+                                            intToTime(duration),
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400),
+                                          );
+                                        },
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      InkWell(
+                                        onTap: () {
+                                          value.fullScreenOption.enabled
+                                              ? widget.controller.exitFullScreen()
+                                              : widget.controller.enterFullScreen();
+                                        },
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 10, left: 5, top: 1, bottom: 1),
+                                          child: SvgPicture.asset(
+                                            height: 24,
+                                            width: 24,
+                                            value.fullScreenOption.enabled
+                                                ? PlayerImages.exitFullScreen
+                                                : PlayerImages.fullScreen,
                                           ),
-                                        ),
-                                        // Spacer(),
-                                        Padding(
-                                          padding: const EdgeInsets.only(right: 18),
-                                          child: InkWell(
-                                            child: Icon(
-                                              color: Colors.white,
-                                              size: 30,
-                                              value.fullScreenOption.enabled
-                                                  ? Icons.fullscreen_exit
-                                                  : Icons.fullscreen,
-                                            ),
-                                            onTap: () {
-                                              value.fullScreenOption.enabled
-                                                  ? widget.controller.exitFullScreen()
-                                                  : widget.controller.enterFullScreen();
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(bottom: 20),
-                                      child: SizedBox(
-                                        height: 10,
-                                        width: MediaQuery.of(context).size.width - widget.width,
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Expanded(
-                                              child: const VideoPositionSeeker(),
-                                            ),
-                                          ],
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             );
@@ -499,9 +514,8 @@ class VideoPositionSeeker extends StatelessWidget {
           builder: (context, setState) {
             return SliderTheme(
               data: const SliderThemeData(
-                  thumbShape: RoundSliderThumbShape(
-                enabledThumbRadius: 6,
-              )),
+                  trackHeight: 6,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8, disabledThumbRadius: 5)),
               child: Slider(
                 thumbColor: const Color(0xffFF6028),
                 // overlayColor: Colors.accents,

@@ -17,6 +17,7 @@ dependencies:
   webview_flutter_wkwebview: ^3.9.4
   url_launcher: ^6.1.8
   youtube_player_iframe_web: ^2.0.2
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -24,9 +25,18 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/player.html
-    - assets/web_player.html
-    - assets/player
+    - assets/player/
+    # - package/yt_player/assets/player/new.png
+    - packages/youtube_player_iframe/assets/player/exit_full_screen.svg
+    - packages/youtube_player_iframe/assets/player/full_screen.svg
+    - packages/youtube_player_iframe/assets/player/pause.svg
+    - packages/youtube_player_iframe/assets/player/play.svg
+    - packages/youtube_player_iframe/assets/player/quality.svg
+    - packages/youtube_player_iframe/assets/player/seek_back.svg
+    - packages/youtube_player_iframe/assets/player/seek_front.svg
+    - packages/youtube_player_iframe/assets/player/speed.svg
+    - packages/youtube_player_iframe/assets/player/new.png
+    
 
   plugin:
     platforms:

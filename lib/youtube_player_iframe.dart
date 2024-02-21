@@ -17,3 +17,4 @@ export 'src/player_value.dart';
 export 'src/widgets/fullscreen_youtube_player.dart';
 export 'src/widgets/youtube_player.dart';
 export 'src/widgets/youtube_player_scaffold.dart';
+export 'src/helpers/images.dart';
