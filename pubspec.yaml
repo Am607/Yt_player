@@ -25,7 +25,8 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/player/
+    - assets/player.html
+    - assets/web_player.html
     # - package/yt_player/assets/player/new.png
     - packages/youtube_player_iframe/assets/player/exit_full_screen.svg
     - packages/youtube_player_iframe/assets/player/full_screen.svg
