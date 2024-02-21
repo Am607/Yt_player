@@ -33,7 +33,7 @@ android/key.properties
 .pub-cache/
 .pub/
 /build/
-/example/build/
+example/build
 
 # Web related
 
