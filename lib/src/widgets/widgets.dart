@@ -36,8 +36,9 @@ Future<void> showSettingsBottomSheet(
                 Container(
                   width: 44,
                   height: 5,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9),
+                      color: const Color(0xffB0B6CC)),
                 ),
                 const SizedBox(
                   height: 16,
@@ -85,11 +86,13 @@ Future<void> showPlayBackBottomSheet(
     isScrollControlled: true,
     backgroundColor: Colors.transparent,
     isDismissible: true,
+    enableDrag: true,
     context: context,
     builder: (context) {
       return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(24), topRight: Radius.circular(24)),
           color: Colors.white,
         ),
         width: double.infinity,
@@ -97,25 +100,28 @@ Future<void> showPlayBackBottomSheet(
         padding: EdgeInsets.only(
           bottom: MediaQuery.of(context).padding.bottom,
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 7),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 44,
-                height: 5,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(9), color: const Color(0xffB0B6CC)),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Column(
-                children: List.generate(
-                  PlaybackRate.all.length,
-                  (index) => InkWell(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 7),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: 44,
+                  height: 5,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9),
+                      color: const Color(0xffB0B6CC)),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                ListView.builder(
+                  reverse: true,
+                  shrinkWrap: true,
+                  itemCount: PlaybackRate.all.length,
+                  itemBuilder: (context, index) => InkWell(
                     onTap: () {
                       controller.setPlaybackRate(PlaybackRate.all[index]);
                       Navigator.of(context).pop();
@@ -129,9 +135,9 @@ Future<void> showPlayBackBottomSheet(
                           );
                         }),
                   ),
-                ).reversed.toList(),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       );
