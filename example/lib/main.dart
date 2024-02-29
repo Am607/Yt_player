@@ -183,7 +183,7 @@ class _PlayerDemoState extends State<PlayerDemo> {
       child: Scaffold(
         body: Builder(builder: (context) {
           return YoutubePlayerScaffold(
-            isBackVisible: false,
+            isBackVisible: true,
             // width: 100,
             controlsPadding: 20,
             // aspectRatio: 16 / 9,

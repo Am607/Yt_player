@@ -163,7 +163,10 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
             duration: const Duration(milliseconds: 300),
             child: Stack(
               children: [
+                //! Boundary
                 SizedBox(width: double.infinity, height: double.infinity),
+
+                //! Player
                 Center(
                   child: AspectRatio(
                     aspectRatio: 16 / 9,
@@ -176,11 +179,12 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     ),
                   ),
                 ),
+
+                //! Shelter
                 YoutubeValueBuilder(builder: (context, value) {
                   return GestureDetector(
                     onTap: () {
                       _toggleControlles();
-                      log('this is happening');
                     },
                     child: Visibility(
                       // visible: value.playerState == PlayerState.paused,
@@ -321,6 +325,9 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                     },
                   ),
                 ),
+
+                //! Top back row
+
                 Positioned.fill(
                   top: 0,
                   child: Align(
@@ -350,24 +357,41 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                         height: 31,
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
-                                          // color: const Color(0xff263047).withOpacity(.8),
-                                          color: Colors.white.withOpacity(.8),
+                                          color: const Color(0x33263047).withOpacity(.8),
+                                          // color: Colors.white.withOpacity(.8),
                                         ),
                                         child: const Center(
-                                          child: Icon(Icons.arrow_back),
+                                          child: Icon(
+                                            Icons.arrow_back,
+                                            color: Colors.white,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                   // Spacer(),
                                   InkWell(
-                                    child: const Icon(
-                                      color: Colors.white,
-                                      size: 30,
-                                      Icons.settings,
+                                    child: Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          fit: BoxFit.scaleDown,
+                                          PlayerImages.speed,
+                                          height: 24,
+                                          width: 24,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          '1x',
+                                          style: TextStyle(
+                                              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+                                        )
+                                      ],
                                     ),
                                     onTap: () {
-                                      showSettingsBottomSheet(context, widget.controller);
+                                      // showSettingsBottomSheet(context, widget.controller);
+                                      showPlayBackBottomSheet(context, widget.controller);
                                     },
                                   ),
                                 ],
@@ -502,7 +526,6 @@ class VideoPositionSeeker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var value = 0.0;
-
     return StreamBuilder<YoutubeVideoState>(
       stream: context.ytController.videoStateStream,
       initialData: const YoutubeVideoState(),
