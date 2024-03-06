@@ -57,7 +57,7 @@ Future<void> showSettingsBottomSheet(
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pop();
-                    showPlayBackBottomSheet(context, controller);
+                    // showPlayBackBottomSheet(context, controller);
                   },
                   child: FutureBuilder<double>(
                       future: controller.playbackRate,
@@ -80,6 +80,7 @@ Future<void> showSettingsBottomSheet(
 
 Future<void> showPlayBackBottomSheet(
   BuildContext context,
+  bool isFullScreen,
   final YoutubePlayerController controller,
 ) {
   return showModalBottomSheet(
@@ -88,6 +89,9 @@ Future<void> showPlayBackBottomSheet(
     isDismissible: true,
     enableDrag: true,
     context: context,
+    constraints: BoxConstraints(
+      maxWidth: isFullScreen ? 390 : double.infinity,
+    ),
     builder: (context) {
       return Container(
         decoration: BoxDecoration(
@@ -95,48 +99,52 @@ Future<void> showPlayBackBottomSheet(
               topLeft: Radius.circular(24), topRight: Radius.circular(24)),
           color: Colors.white,
         ),
-        width: double.infinity,
+        // width: isFullScreen ? 390 : null,
+
         // height: 166,
         padding: EdgeInsets.only(
           bottom: MediaQuery.of(context).padding.bottom,
         ),
         child: SafeArea(
+          left: !isFullScreen,
           child: Padding(
             padding: const EdgeInsets.only(top: 7),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: 44,
-                  height: 5,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9),
-                      color: const Color(0xffB0B6CC)),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                ListView.builder(
-                  reverse: true,
-                  shrinkWrap: true,
-                  itemCount: PlaybackRate.all.length,
-                  itemBuilder: (context, index) => InkWell(
-                    onTap: () {
-                      controller.setPlaybackRate(PlaybackRate.all[index]);
-                      Navigator.of(context).pop();
-                    },
-                    child: FutureBuilder<double>(
-                        future: controller.playbackRate,
-                        builder: (context, s) {
-                          return SubMenuItem(
-                            isSelected: s.data == PlaybackRate.all[index],
-                            mainText: '${PlaybackRate.all[index]} ${'x'}',
-                          );
-                        }),
+            child: SizedBox(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 44,
+                    height: 5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9),
+                        color: const Color(0xffB0B6CC)),
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  ListView.builder(
+                    reverse: true,
+                    shrinkWrap: true,
+                    itemCount: PlaybackRate.all.length,
+                    itemBuilder: (context, index) => InkWell(
+                      onTap: () {
+                        controller.setPlaybackRate(PlaybackRate.all[index]);
+                        Navigator.of(context).pop();
+                      },
+                      child: FutureBuilder<double>(
+                          future: controller.playbackRate,
+                          builder: (context, s) {
+                            return SubMenuItem(
+                              isSelected: s.data == PlaybackRate.all[index],
+                              mainText: '${PlaybackRate.all[index]} ${'x'}',
+                            );
+                          }),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -234,6 +242,7 @@ class SubMenuItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
             width: 25,

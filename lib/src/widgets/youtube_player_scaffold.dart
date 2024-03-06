@@ -234,7 +234,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                   onTap: () async {
                                     // if (position >= 10) {
                                     await widget.controller.seekTo(
-                                      seconds: position - 10,
+                                      seconds: position - 5,
                                       allowSeekAhead: true,
                                     );
                                     await widget.controller.playVideo();
@@ -247,15 +247,19 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: const Color(0x33263047)
-                                            .withOpacity(.8),
+                                        color: const Color(0x33263047),
                                         // color: Colors.white.withOpacity(.8),
                                       ),
                                       padding: EdgeInsets.fromLTRB(9, 6, 9, 9),
                                       child: SvgPicture.asset(
                                         PlayerImages.seekBack,
-                                        width: 28,
-                                        height: 28,
+                                        fit: BoxFit.scaleDown,
+                                        height: value.fullScreenOption.enabled
+                                            ? 50
+                                            : 28,
+                                        width: value.fullScreenOption.enabled
+                                            ? 50
+                                            : 28,
                                       ),
                                     ),
                                   ),
@@ -277,26 +281,36 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                 child: Container(
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color:
-                                        const Color(0x33263047).withOpacity(.8),
+
+                                    color: const Color(0x33263047),
                                     // color: Colors.white.withOpacity(.8),
                                   ),
                                   padding:
                                       value.playerState == PlayerState.playing
                                           ? EdgeInsets.fromLTRB(11, 11, 11, 11)
                                           : EdgeInsets.fromLTRB(11, 11, 7, 11),
-                                  child:
-                                      value.playerState == PlayerState.playing
-                                          ? SvgPicture.asset(
-                                              PlayerImages.pause,
-                                              width: 28,
-                                              height: 28,
-                                            )
-                                          : SvgPicture.asset(
-                                              PlayerImages.play,
-                                              width: 28,
-                                              height: 28,
-                                            ),
+                                  child: value.playerState ==
+                                          PlayerState.playing
+                                      ? SvgPicture.asset(
+                                          PlayerImages.pause,
+                                          fit: BoxFit.scaleDown,
+                                          height: value.fullScreenOption.enabled
+                                              ? 50
+                                              : 24,
+                                          width: value.fullScreenOption.enabled
+                                              ? 50
+                                              : 24,
+                                        )
+                                      : SvgPicture.asset(
+                                          PlayerImages.play,
+                                          fit: BoxFit.scaleDown,
+                                          height: value.fullScreenOption.enabled
+                                              ? 50
+                                              : 24,
+                                          width: value.fullScreenOption.enabled
+                                              ? 50
+                                              : 24,
+                                        ),
                                 ),
                               ),
                             ),
@@ -314,7 +328,7 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                 return InkWell(
                                   onTap: () async {
                                     await widget.controller.seekTo(
-                                      seconds: (position + 10),
+                                      seconds: (position + 5),
                                       allowSeekAhead: true,
                                     );
                                     await widget.controller.playVideo();
@@ -348,8 +362,13 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                       padding: EdgeInsets.fromLTRB(9, 6, 9, 9),
                                       child: SvgPicture.asset(
                                         PlayerImages.seekFront,
-                                        width: 28,
-                                        height: 28,
+                                        fit: BoxFit.scaleDown,
+                                        height: value.fullScreenOption.enabled
+                                            ? 54
+                                            : 28,
+                                        width: value.fullScreenOption.enabled
+                                            ? 54
+                                            : 28,
                                       ),
                                     ),
                                   ),
@@ -410,32 +429,38 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                     ),
                                   ),
                                   // Spacer(),
-                                  InkWell(
-                                    child: Row(
-                                      children: [
-                                        SvgPicture.asset(
-                                          fit: BoxFit.scaleDown,
-                                          PlayerImages.speed,
-                                          height: 24,
-                                          width: 24,
-                                        ),
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Text(
-                                          '1x',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.bold),
-                                        )
-                                      ],
+                                  Visibility(
+                                    visible: !value.fullScreenOption.enabled,
+                                    child: InkWell(
+                                      child: Row(
+                                        children: [
+                                          SvgPicture.asset(
+                                            fit: BoxFit.scaleDown,
+                                            PlayerImages.speed,
+                                            height: 24,
+                                            width: 24,
+                                          ),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            '1x',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 17,
+                                                fontWeight: FontWeight.bold),
+                                          )
+                                        ],
+                                      ),
+                                      onTap: () {
+                                        // showSettingsBottomSheet(context, widget.controller);
+                                        showPlayBackBottomSheet(
+                                          context,
+                                          value.fullScreenOption.enabled,
+                                          widget.controller,
+                                        );
+                                      },
                                     ),
-                                    onTap: () {
-                                      // showSettingsBottomSheet(context, widget.controller);
-                                      showPlayBackBottomSheet(
-                                          context, widget.controller);
-                                    },
                                   ),
                                 ],
                               ),
@@ -451,21 +476,24 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                 YoutubeValueBuilder(
                   builder: (context, value) {
                     return Positioned.fill(
-                        bottom: 0,
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Visibility(
-                            visible: value.isControlsVisible,
-                            child: Builder(builder: (context) {
-                              return ConstrainedBox(
-                                constraints: const BoxConstraints(),
-                                child: Padding(
-                                  padding: EdgeInsets.only(bottom: 10),
-                                  child: SizedBox(
-                                    height: 20,
-                                    width: MediaQuery.of(context).size.width -
-                                        widget.controlsPadding,
-                                    child: Row(
+                      bottom: 0,
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Visibility(
+                          visible: value.isControlsVisible,
+                          child: Builder(builder: (context) {
+                            return Padding(
+                              padding: EdgeInsets.only(bottom: 10),
+                              child: SizedBox(
+                                // height: 20,
+                                width: MediaQuery.of(context).size.width -
+                                    widget.controlsPadding,
+                                child: Column(
+                                  // mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       crossAxisAlignment:
@@ -541,12 +569,49 @@ class _YoutubePlayerScaffoldState extends State<YoutubePlayerScaffold> {
                                         ),
                                       ],
                                     ),
-                                  ),
+                                    Visibility(
+                                      visible: value.fullScreenOption.enabled,
+                                      child: InkWell(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            SvgPicture.asset(
+                                              fit: BoxFit.scaleDown,
+                                              PlayerImages.speed,
+                                              height: 24,
+                                              width: 24,
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              '1x',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.bold),
+                                            )
+                                          ],
+                                        ),
+                                        onTap: () {
+                                          // showSettingsBottomSheet(context, widget.controller);
+                                          showPlayBackBottomSheet(
+                                            context,
+                                            value.fullScreenOption.enabled,
+                                            widget.controller,
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              );
-                            }),
-                          ),
-                        ));
+                              ),
+                            );
+                          }),
+                        ),
+                      ),
+                    );
                   },
                 )
               ],
